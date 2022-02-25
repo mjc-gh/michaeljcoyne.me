@@ -26,7 +26,10 @@ header {
 }
 
 footer {
-    height:5vh;
+    height:6vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 main {

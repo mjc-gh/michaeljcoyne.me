@@ -17,7 +17,7 @@ set :fonts_dir,  'fonts'
 activate :protect_emails
 
 # Enable robot friendly site maps
-activate :sitemap
+activate :sitemap, hostname: 'https://www.michaeljcoyne.me'
 
 # Setup and activate photo resize extension
 PHOTO_SIZES = {
@@ -27,7 +27,8 @@ PHOTO_SIZES = {
 }
 
 ignore 'photos/*'
-#ignore 'photography.html'
+ignore 'photography.html'
+ignore 'open-source.html'
 
 activate :photo_resize,
   path_name: 'photos', sizes: PHOTO_SIZES
@@ -40,6 +41,8 @@ end
 
 # Build-specific configuration
 configure :build do
+  config[:host] = "https://www.michaeljcoyne.me"
+
   # Minify CSS on build
   activate :minify_css
 
@@ -51,4 +54,3 @@ end
 configure :development do
   activate :livereload
 end
-
