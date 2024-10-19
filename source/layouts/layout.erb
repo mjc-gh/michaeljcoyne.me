@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= current_page.data.title || site_title %></title>
+
+    <link rel="canonical" href="<%= config[:host] %><%= current_page.url %>" />
+    <meta property="og:url" content="<%= config[:host] %><%= current_page.url %>" />
+    <meta property="og:title" content="<%= current_page.data.title || site_title %>" />
+    <meta property="og:description" content="<%= current_page.data.description || site_description -%>" />
+    <meta property="og:image" content="<%= config[:host] -%>/images/og-image.png" />
+    <meta property="og:type" content="website" />
+
+    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "tailwind" %>
+
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body class="bg-slate-800 min-h-screen">
+    <%= yield %>
+  </body>
+</html>

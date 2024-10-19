@@ -1,0 +1,35 @@
+---
+title: 👋 Welcome to the webpage of Michael J Coyne
+---
+
+<div class="mx-auto max-w-screen-xl gap-16 grid px-2 pb-16 mt-[180px] md:px-0 md:grid-cols-[1fr_2fr] md:mt-[200px] lg:mt-[220px]">
+  <div>
+    <%= partial "infobar" -%>
+  </div>
+
+  <div class="space-y-8 md:space-y-12 xl:space-y-16">
+    <% if false -%>
+      <%= partial "navbar" -%>
+    <% end -%>
+
+    <% well_tag do -%>
+      <div class="prose prose-invert">
+        <h1>About me</h1>
+        <p>
+          Hello, I'm Michael! I am a computing scientist and software
+          engineering leader currently residing in New York City.
+        </p>
+
+        <p>
+          I enjoy writing software, crafting thoughtful user experiences, and
+          helping start-ups and companies leverage technology in innovative ways.
+        </p>
+
+        <p>
+          Feel free to reach out with questions about software engineering,
+          cyber security, or tech start-ups. Thanks for visiting!
+        </p>
+      </div>
+    <% end -%>
+  </div>
+</div>
