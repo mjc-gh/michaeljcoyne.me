@@ -17,7 +17,7 @@ end
 
 configure :build do
   activate :asset_hash, ignore: [
-    /og-image\.png/, 'mini_beacon.js'
+    /og-image\.png/, /mini_beacon\..js/
   ]
 end
 
