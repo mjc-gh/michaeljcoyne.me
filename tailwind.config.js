@@ -3,8 +3,10 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    "config.rb",
-    "source/**/*.erb"
+    "_includes/**/*.html",
+    "_layouts/**/*.html",
+    "index.md",
+    "_posts/**/*.md"
   ],
   theme: {
     extend: {
@@ -18,4 +20,3 @@ module.exports = {
     require('@tailwindcss/typography')
   ],
 }
-

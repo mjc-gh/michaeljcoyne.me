@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article>
+  <div class="prose prose-invert">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  {% if page.date %}
+    <p class="text-gray-400 text-sm">
+      Published on {{ page.date | date: "%B %d, %Y" }}
+    </p>
+  {% endif %}
+
+  <div class="prose prose-invert mt-8">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="flex justify-center items-center mt-12">
+  <a href="/" class="inline-flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+    </svg>
+    <span class="text-lg font-medium">
+      Return Home
+    </span>
+  </a>
+</nav>

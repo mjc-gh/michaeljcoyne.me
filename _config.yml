@@ -1,0 +1,46 @@
+title: "michaeljcoyne.me"
+email: "mjc@hey.com"
+description: "Hello, I'm Michael! I am a computing scientist, software engineer, and tech start-up advisor living in NYC."
+url: "https://michaeljcoyne.me"
+baseurl: ""
+lang: "en"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+timezone: "America/New_York"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year-:month-:day-:title.html
+
+# Include/exclude
+include:
+  - .htaccess
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Output settings
+permalink: /:path/
+
+# Plugins
+plugins:
+  - jekyll-tailwindcss
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
