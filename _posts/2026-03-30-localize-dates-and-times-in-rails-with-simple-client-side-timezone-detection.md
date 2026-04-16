@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Localize dates and times in Rails with simple client-side timezone detection"
-date:   2026-03-31T12:00:00Z
+date:   2026-03-30T12:00:00Z
 description: Learn how to detect and store user timezone in browsers using JavaScript, Stimulus, and client-side cookies.
 ---
 

@@ -29,7 +29,7 @@ bundle exec jekyll clean
 
 echo ""
 echo "Step 5: Building Jekyll site..."
-bundle exec jekyll build
+bundle exec jekyll build --verbose
 
 echo ""
 echo "================================"
@@ -37,8 +37,6 @@ echo "✓ Build complete!"
 echo "================================"
 echo ""
 echo "Output directory: _site/"
-echo ""
-echo "To run development server:"
-echo "  npm run watch & bundle exec jekyll serve"
-echo ""
-echo "Build output is ready for deployment."
+
+ls -al _site
+ls -al _site/posts
