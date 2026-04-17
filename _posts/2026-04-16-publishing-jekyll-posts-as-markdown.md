@@ -1,4 +1,9 @@
-# Publishing Jekyll Posts as Markdown
+---
+layout: post
+title:  "Publishing Jekyll Posts as Markdown"
+date:   2026-04-16T10:30:00Z
+description: "Make content more accessible for LLM-based workflows by exposing your Jekyll posts as Markdown."
+---
 
 In the era of agentic development and workflows, plaintext and Markdown content has quickly become the de facto way of capturing and sharing context for LLM sessions.
 
