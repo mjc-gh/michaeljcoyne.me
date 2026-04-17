@@ -38,7 +38,7 @@ end
 Liquid::Template.register_filter(Jekyll::MarkdownLinkFilter)
 ```
 
-In my `_layouts/post.html`, I then added a link to view the post as Markdown with the following HTML:
+Lastly, in `_layouts/post.html` we can add a link to the Markdown version with the following HTML:
 
 ```html
 <a href="{{ page.url | to_markdown_link }}">
