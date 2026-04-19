@@ -29,6 +29,8 @@ module MagicLinkable
 end
 ```
 
+The `MagicLinkable` concern would likely be included in your `User` model. That said, it really depends on your application and your use case.
+
 The `generate_magic_link_token` method would generally be used with a mailer; however, the delivery mechanism could vary.
 
 ```ruby
@@ -51,7 +53,7 @@ module UserVerifiable
     if @user.nil?
       redirect_on_verification_failed, flash: { alert: I18n.t("invalid", scope: flash_i18n_namespace) }
     else
-	     handle_verification_success
+	  handle_verification_success
     end
   end
 
@@ -84,12 +86,12 @@ class Users::SessionsController < ApplicationController
   private
 
   def redirect_on_verification_failed
-	  redirect_to login_url, alert: "Invalid token"
-	end
+	redirect_to login_url, alert: "Invalid token"
+  end
 
   def handle_verification_success
-	  redirect_to home_url, notice: "Sign in successful"
-	end
+	redirect_to home_url, notice: "Sign in successful"
+  end
 end
 
 # app/controllers/users/registrations_controller.rb
@@ -99,12 +101,12 @@ class Users::RegistrationsController < ApplicationController
   private
 
   def redirect_on_verification_failed
-	  redirect_to sign_up_url, alert: "Invalid token"
-	end
+    redirect_to sign_up_url, alert: "Invalid token"
+  end
 
   def handle_verification_success
-	  redirect_to home_url, notice: "Sign in successful"
-	end
+    redirect_to home_url, notice: "Sign in successful"
+  end
 end
 ```
 
@@ -113,14 +115,13 @@ If you are using something like Devise or Revise Auth, I'd suggest adding new co
 ```ruby
 # config/routes.rb
 namespace :users do
-	resources :session_links, only: [] do
-		collection { :verify }
-	end
+  resources :session_links, only: [] do
+    collection { :verify }
+  end
 
-	resources :registration_links, only: [] do
-		collection { :verify }
-	end
+  resources :registration_links, only: [] do
+    collection { :verify }
+  end
 end
 ```
-
 Overall, Global ID is a really useful feature of Rails with many uses.
