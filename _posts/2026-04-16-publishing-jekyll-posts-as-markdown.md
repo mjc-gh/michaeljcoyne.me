@@ -45,4 +45,4 @@ Lastly, in `_layouts/post.html` we can add a link to the Markdown version with t
   View as Markdown
 </a>
 ```
-How easy is that? All the posts on this site will have a link below the post header to view the content as Markdown.
+How easy is that? All the posts on this site will have a link below the post's header to view the content as Markdown.
