@@ -33,6 +33,16 @@ export default class extends Controller {
 }
 ```
 
+You'll need the [cookies.js](https://www.npmjs.com/package/cookiejs) and
+the [jstimezonedetect](https://www.npmjs.com/package/jstimezonedetect)
+package installed. This depends on your app, but using importmap it's as
+simple as:
+
+```
+bin/importmap pin cookies.js
+bin/importmap pin jstimezonedetect
+```
+
 Next, we'll need to consume this cookie server-side and call
 `Time.use_zone` via a controller action callback.
 
