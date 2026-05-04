@@ -29,7 +29,7 @@ bundle exec jekyll clean
 
 echo ""
 echo "Step 5: Building Jekyll site..."
-bundle exec jekyll build --verbose
+JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 echo ""
 echo "================================"
