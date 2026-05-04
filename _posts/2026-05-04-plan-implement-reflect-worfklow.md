@@ -164,7 +164,7 @@ model: openrouter/anthropic/claude-haiku-4.6
 The contents of the implement command are as follows:
 
 ```markdown
-Here is the GitHub issue to implement:
+Fetch the issue to content using:
 
 `gh api repos/[GITHUG_USER]/[GITHUB_REPO]/issues/$1 | jq -r '"### \(.title)\n\(.body)"'`
 
@@ -216,22 +216,29 @@ Let’s hold a brief retro and reflect on this session and the latest changes ma
   - If `AGENTS.md` or other `doc/` files are outdated or inaccurate, flag this and suggest how to keep them current and non-redundant
 ```
 
-You may need to change the language in this command/skill to better fit
-your project and needs. Part of the reflection process is to *only offer
-documentation changes that will reduce future efforts*. More than half
-the time I use this command, the agent does not offer any changes,
-especially as my project and features begins to stabilize. I may also
-not `/reflect` on every session, it just really depends what is being
-worked on.
+This is perhaps the biggest departure from the RPI workflow outlined by
+Goose. The reflect/retro phase is intended to aid in context engineering
+efforts and will help us *better curate and structure the context* that is
+feed into our agent in future sessions.
+
+You may need to change the language in this command/skill to
+better fit your project and needs. Part of the reflection process is to
+*only offer documentation changes that will reduce future efforts*. More
+than half the time I use this command, the agent does not offer any
+changes, especially as my project and features begin to stabilize. I may
+also not `/reflect` on every session, it just really depends what is
+being worked on.
 
 ### The “Plan, Implement, Reflect” Workflow
 
 The workflow and its supporting commands are also available (and likely
 more up to date) on my [context_stash
-repo](https://github.com/mjc-gh/context_stash/). This repo contains
-various markdown files and scraps of text that I will use with agentic
-development and LLMs and was inspired by comments made by
-[Simon Willison on Lenny's Podcast](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union).
+repo](https://github.com/mjc-gh/context_stash/). This repository also
+has versions of these commands as OpenCode skills in the `skills/`
+directory. This repo contains various markdown files and scraps of text
+that I will use with agentic development and LLMs and was inspired by
+comments made by [Simon Willison on Lenny's
+Podcast](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union).
 
 While the specifics of this workflow may change over time, I think this
 simple workflow will be applicable to agentic development for a while.
