@@ -1,0 +1,7 @@
+The telescoping nature of the agentic AI era is revolutionizing the way we build software, with agile workflows now happening on accelerated timelines of minutes and hours instead of days and weeks.
+
+I have written a new blog post on how I am leveraging AI agents to write software, using a simple yet powerful "Plan, Implement, Reflect" workflow.
+
+Check it out to learn how you can adapt to this new era of software development and stay ahead of the curve. [Link to blog post]
+
+#AgenticDevelopment #AIAssistedSoftwareDevelopment #AgileMethodologies #SoftwareDevelopment #FutureOfWork
