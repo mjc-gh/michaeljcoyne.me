@@ -10,12 +10,15 @@
       </div>
 
       <div class="space-y-8 md:space-y-12 xl:space-y-16">
+        {% include navbar.html %}
+
         <a id="content"></a>
         <div class="bg-slate-900 text-white rounded-md border border-slate-600 p-8 relative">
           {{ content }}
         </div>
 
         {% if page.show_posts %}
+          <a id="posts"></a>
           <div class="bg-slate-900 text-white rounded-md border border-slate-600 p-8 relative">
             <div class="prose prose-invert mb-4">
               <h2>Posts</h2>
